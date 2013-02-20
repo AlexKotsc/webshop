@@ -1,1 +1,68 @@
 //cloud.dtd
+<?xml version="1.1"?>
+<!DOCTYPE SYSTEM "http://www.cs.au.dk/dWebTek/2011">
+  
+	<!ELEMENT sellItems (shopKey,itemID,customerID,saleAmount)>
+	
+	<!ELEMENT adjustItemStock (shopKey,itemID,adjustment)>
+	<!ELEMENT adjustment (#PCDATA)>
+
+	<!ELEMENT modifyItem (shopKey,itemID,itemName,itemPrice,itemURL,itemDescription)>
+	
+	<!ELEMENT login (customerName,customerPass)>
+ 
+	<!ELEMENT createItem (shopKey,itemName)>
+	
+	<!ELEMENT createCustomer (shopKey,customerName,customerPass)>
+
+	<!ELEMENT createCustomerResponse (customerID | usernameTaken)*>
+
+	<!ELEMENT usernameTaken EMPTY>
+
+	<!ELEMENT saleResponse (ok | itemSoldOut | error)*>
+	
+	<!ELEMENT ok EMPTY>
+	<!ELEMENT itemSoldOut EMPTY>
+	<!ELEMENT error EMPTY>
+	
+	<!ELEMENT loginResponse (customerID,customerName)>
+	
+	<!--  Other stuff --> 
+	
+	<!ELEMENT items item>
+
+	<!ELEMENT shops shop>
+	
+	<!ELEMENT sales sale>
+	
+	<!ELEMENT customers customer>
+	
+	<!ELEMENT item (itemID,itemName,itemURL,itemPrice,itemStock,itemDescription)>
+
+	<!ELEMENT shop (shopID,shopName,shopURL)>
+
+	<!ELEMENT sale (saleTime,saleAmount,shopID,itemID,customerID,saleItemPrice)>
+	
+	<!ELEMENT customer (customerID,customerName)>
+
+	<!ELEMENT customerName (#PCDATA)>
+
+	<!ELEMENT customerPass (#PCDATA)>
+	
+	<!ELEMENT itemID (#PCDATA)>
+	<!ELEMENT itemName (#PCDATA)>
+	<!ELEMENT itemURL (#PCDATA)>
+	<!ELEMENT itemPrice (#PCDATA)>
+	<!ELEMENT itemStock (#PCDATA)>
+	<!ELEMENT itemDescription (#PCDATA)>
+	
+	<!ELEMENT shopKey (#PCDATA)>
+	<!ELEMENT shopID (#PCDATA)> 
+	<!ELEMENT shopName (#PCDATA)>
+	<!ELEMENT shopURL (#PCDATA)>
+	
+	<!ELEMENT saleTime (#PCDATA)>
+
+	<!ELEMENT customerID (#PCDATA)>
+	<!ELEMENT saleItemPrice (#PCDATA)>
+	<!ELEMENT saleAmount (#PCDATA)>
